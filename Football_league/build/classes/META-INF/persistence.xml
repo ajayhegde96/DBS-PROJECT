@@ -6,6 +6,7 @@
     <class>football_league.Stadium</class>
     <class>football_league.Login</class>
     <class>football_league.Manager_1</class>
+    <class>football_league.Clubs</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/football_league?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="ajayhegde"/>

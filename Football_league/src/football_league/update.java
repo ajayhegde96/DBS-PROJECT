@@ -159,7 +159,9 @@ public class update extends javax.swing.JFrame {
     }//GEN-LAST:event_tf2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+       manageup m=new manageup();
+       this.setVisible(false);
+       m.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void tf4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf4ActionPerformed

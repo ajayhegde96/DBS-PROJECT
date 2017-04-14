@@ -269,11 +269,12 @@ public class leagueup extends javax.swing.JFrame {
                 s.executeUpdate("update league set position='"+(s1)+"',won='"+s3+"',lost='"+s4+"',draw='"+s5+"',goals_for='"+s6+"',goals_against='"+s7+"',points='"+s8+"'where club_name='"+s2+"'");
                 rs=s.executeQuery("select * from league order by position");
                 t.setModel(DbUtils.resultSetToTableModel(rs));
+                JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
             } catch (SQLException ex) {
                 Logger.getLogger(leagueup.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null,"ERROR","Error",JOptionPane.ERROR_MESSAGE);
             }
-            JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
+           
             
     }//GEN-LAST:event_jButton2ActionPerformed
 

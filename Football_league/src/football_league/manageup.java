@@ -161,12 +161,12 @@ public class manageup extends javax.swing.JFrame {
                 s.executeUpdate("update manager set name='"+s2+"',country='"+s3+"',club_name='"+s4+"'where license_id='"+s1+"'");
                 rs=s.executeQuery("select * from manager");
                 t.setModel(DbUtils.resultSetToTableModel(rs));
-                
+                JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
             } catch (SQLException ex) {
                 Logger.getLogger(stadiumup.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null,"ERROR","Error",JOptionPane.ERROR_MESSAGE);
             }
-            JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
+            
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void tMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tMouseClicked

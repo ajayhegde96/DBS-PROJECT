@@ -196,12 +196,12 @@ public class stadiumup extends javax.swing.JFrame {
                 s.executeUpdate("update stadium set name='"+s2+"',capacity='"+s3+"',city='"+s4+"'where club_name='"+s1+"'");
                 rs=s.executeQuery("select * from stadium");
                 t.setModel(DbUtils.resultSetToTableModel(rs));
-                
+                 JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
             } catch (SQLException ex) {
                 Logger.getLogger(stadiumup.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null,"ERROR","Error",JOptionPane.ERROR_MESSAGE);
             }
-            JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -5,6 +5,10 @@
  */
 package football_league;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javafx.application.Platform.exit;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ajayhegde
@@ -110,7 +114,18 @@ public class loginup extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+            try {
+                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/football_league","ajayhegde","root");
+                s=con.createStatement();
+               s.executeUpdate("update login set password='"+pw.getText()+"'where username='"+tf1.getText()+"'");
+               Admin a=new Admin();
+               this.setVisible(false);
+               a.setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(loginup.class.getName()).log(Level.SEVERE, null, ex);
+                exit();
+            }
+             JOptionPane.showMessageDialog(null,"SUCCESSFUL","DONE!",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
